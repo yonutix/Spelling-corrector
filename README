@@ -1,0 +1,27 @@
+Mihai Cosmin 322CC
+
+
+Distanta dintre 2 cuvinte o aflu folosind algoritmul Levenshtein.L-am optimizat tinand cont de faptul ca nu intotdeauna e nevoie sa aflu distanta maxima ci doar o distanta mai mica decat un minim.Pentru asta verifica daca pe diagonala distanta devine mai mare decat restrictia k pentru ca am observat ca pe diagonala elementele sunt crescatoare.Matricea pentrue distanta levenshtein am declarat-o global ca sa nu trebuiasca alocata pentru fiecare apel al functiei.
+
+Dupa ce citesc dictionarul intr-o structura care contine stringul si frecventa acestuia, sortez vectorul de structuri dupa lungimea cuvantului.
+
+
+Cu functia search_word caut in dictionar un cuvant.
+Cautarea o fac in 2 pasi:
+Cautarea o fac de la minimul dintre lungimea cuvantului si lungimea maxima a unui cuvant spre 0. si, daca cuvantul este mai mic decat ungimea maxima a cuvintelor din dictionar caut si spre dreapta.
+Returnez distanta minima dintre cuvantul cautat si un cuvant din dictionar si cuvantul cautat.
+
+Folosesc functia strapp ca sa aflu numarul de cuvinte dintr-un string.
+
+Ca sa aflu expresia cea mai apropiata de cea cautata folosesc partea de deasupra diagonalei principale pe care o vad ca un triunghi format din romburi care are la baza distanta minima dintre fiecare litera si un cuvant din dicionar, "cuvantul"(poate fi litera), si un minim local al distantei.Folosesc o metoda asemanatoare cu problema parantezarii matricilor astfel incat sa se efectueze un numar minim de inmultiri din laboratorul de programare dinamica.
+
+Cu ajutorul functiei combine alatur 2 cuvinte cu spatiu la mijloc si le insumez frecventele pentru a putea compara cu cuvantul fara spatii cautat in dictionar
+
+Functia shrink scoate spatiile din string.
+In main scot spatiile din cuvant, apoi impart cuvantul si afisez.
+
+SO:Ubuntu 10.04
+Editor: Sublime text
+Compilator: gcc 4.4.3
+
+Scuze daca am memorie neeliberata.
